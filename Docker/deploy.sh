@@ -11,7 +11,7 @@ DATE=$(date '+%Y-%m-%d-%H-%M-%S')
 echo $DATE
 ECR_URL="xxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com"
 DOCKER_IMAGE_NAME="docker"
-EXCUTE_ROLE_ARN="arn:aws:iam::551661122454:role\/ecsTaskExecutionRole"
+EXCUTE_ROLE_ARN="arn:aws:iam::xxxxxxxxxxxx:role\/ecsTaskExecutionRole"
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 TASK_DEF_NAME="task_def"
