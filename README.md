@@ -2,13 +2,13 @@ Jenkins Pipeline for ECS_fargate
 
 # General
  ## Log Rotation for old build files
- Max files 30
- Max days 0
+    Max files 30
+    Max days 0
  
  # SCM
   ## Git
    ### Repositories
-    Repository URL :git@github.com:hodoolabs/GSP-V2-backoffice.git
+    Repository URL :git@github.com:xxxxxx/xxxxxxx.git
     Credentials : root (jenkins-root)
    
    ### Branches to build
