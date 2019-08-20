@@ -1,5 +1,7 @@
 Jenkins Pipeline for ECS_fargate
 
+# New Item for Maven project
+
 # General
   ### Delete Old build files
     Strategy : Log Rotation
