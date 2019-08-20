@@ -9,22 +9,22 @@ echo `pwd`
 # Edit Below Options
 DATE=$(date '+%Y-%m-%d-%H-%M-%S')
 echo $DATE
-ECR_URL="551661122454.dkr.ecr.ap-northeast-1.amazonaws.com"
+ECR_URL="xxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com"
 DOCKER_IMAGE_NAME="hodoo"
 EXCUTE_ROLE_ARN="arn:aws:iam::551661122454:role\/ecsTaskExecutionRole"
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
-TASK_DEF_NAME="backoffice-gspv2"
+TASK_DEF_NAME="task_def"
 TASK_DEF_CONF="ecs-task-definition.conf"
 
-CLUSTER_NAME="backoffice-GSPv2"
-SERVICE_NAME="gspv2-backoffice"
+CLUSTER_NAME="cluster"
+SERVICE_NAME="service"
 SERVICE_CONF="ecs-service.conf"
 
 MINIMUM_HEALTHY_PERCENT=100
 MAXIMUM_PERCENT=200
-SUBNETS='"subnet-05f756e7b3f787c98","subnet-06dce8d5699789a14"'
-SECURITY_GROUPS='"sg-0d78436a473366d04"'
+SUBNETS='"subnet-xxxxxxxxxx","subnet-xxxxxxxxxx"'
+SECURITY_GROUPS='"sg-xxxxxxx"'
 
 DESIRED_COUNT=2
 # ecr login
