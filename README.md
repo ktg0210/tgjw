@@ -18,13 +18,11 @@ Jenkins Pipeline for ECS_fargate
     
 
 # Pre Steps
-  ## Excute shell
-sh env.sh
+  ### Excute shell
+    sh env.sh
 
 # Post Steps
- ## Excute shell
- 
-sh case.sh
-sleep 1
-rm -f env.conf
-
+ ### Excute shell
+   sh case.sh
+   sleep 1
+   rm -f env.conf
