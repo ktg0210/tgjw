@@ -10,7 +10,7 @@ echo `pwd`
 DATE=$(date '+%Y-%m-%d-%H-%M-%S')
 echo $DATE
 ECR_URL="xxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com"
-DOCKER_IMAGE_NAME="hodoo"
+DOCKER_IMAGE_NAME="docker"
 EXCUTE_ROLE_ARN="arn:aws:iam::551661122454:role\/ecsTaskExecutionRole"
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
