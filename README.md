@@ -6,23 +6,23 @@ Jenkins Pipeline for ECS_fargate
     Max days 0
  
  # SCM
-  ## Git
-   ### Repositories
-    Repository URL :git@github.com:xxxxxx/xxxxxxx.git
-    Credentials : root (jenkins-root)
+  ### Git
+   #### Repositories
+        Repository URL :git@github.com:xxxxxx/xxxxxxx.git
+        Credentials : root (jenkins-root)
    
-   ### Branches to build
-    Branch Specifier(blank for 'any') : **(blank)
-    Repository browser : (auto)
+   #### Branches to build
+        Branch Specifier(blank for 'any') : **(blank)
+        Repository browser : (auto)
     
     
 
 # Pre Steps
-  ### Excute shell
+  #### Excute shell
     sh env.sh
 
 # Post Steps
- ### Excute shell
+ #### Excute shell
     sh case.sh
     sleep 1
     rm -f env.conf
