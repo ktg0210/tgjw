@@ -9,7 +9,7 @@ Jenkins Pipeline for ECS_fargate
   ### Git
    #### Repositories
     Repository URL :git@github.com:xxxxxx/xxxxxxx.git
-    Credentials : root (jenkins-root)
+    Credentials : xxxx (jenkins-root)
    
    #### Branches to build
     Branch Specifier(blank for 'any') : **(blank)
