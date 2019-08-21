@@ -1,0 +1,71 @@
+
+mysql> SHOW VARIABLES WHERE Variable_name LIKE '%time_zone%';
++------------------+--------+
+| Variable_name    | Value  |
++------------------+--------+
+| system_time_zone | UTC    |
+| time_zone        | SYSTEM |
++------------------+--------+
+2 rows in set (0.00 sec)
+
+SELECT @@global.time_zone, @@session.time_zone;
+
+mysql> select count(*) from mysql.time_zone;
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+[root@db-dev ~]# mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -uroot -P 33306 -p mysql
+Enter password:
+Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+
+[root@db-dev ~]# mysql -uroot -P 33306 -p
+
+mysql> select count(*) from mysql.time_zone;
++----------+
+| count(*) |
++----------+
+|     1780 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SET GLOBAL time_zone='Asia/Seoul';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SET time_zone='Asia/Seoul';
+Query OK, 0 rows affected (0.00 sec)
+
+
+mysql> SHOW VARIABLES WHERE Variable_name LIKE 'time_zone';
++---------------+------------+
+| Variable_name | Value      |
++---------------+------------+
+| time_zone     | Asia/Seoul |
++---------------+------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT @@global.time_zone, @@session.time_zone;
++--------------------+---------------------+
+| @@global.time_zone | @@session.time_zone |
++--------------------+---------------------+
+| Asia/Seoul         | Asia/Seoul          |
++--------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> select now();
++---------------------+
+| now()               |
++---------------------+
+| 2019-08-08 10:33:50 |
++---------------------+
+1 row in set (0.00 sec)
+
+참고
+https://dev.mysql.com/doc/refman/5.5/en/time-zone-support.html
