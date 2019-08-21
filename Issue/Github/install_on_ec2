@@ -1,0 +1,11 @@
+작업 : 
+yum install -y https://d3pxv6yz143wms.cloudfront.net/8.212.04.2/java-1.8.0-amazon-corretto-devel-1.8.0_212.b04-2.x86_64.rpm
+wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat/jenkins.repo
+rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+yum install jenkins urw-fonts git -y
+systemctl start jenkins
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+참고 :
+https://docs.aws.amazon.com/whitepapers/latest/jenkins-on-aws/installation.html
+https://withhamit.tistory.com/38
