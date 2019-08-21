@@ -1,0 +1,18 @@
+문제 :
+
+Couldn't execute 'SELECT COLUMN_NAME, JSON_EXTRACT(HISTOGRAM,
+'$."number-of-buckets-specified"') FROM
+information_schema.COLUMN_STATISTICS WHERE SCHEMA_NAME = 'database' AND
+TABLE_NAME = 'table';':
+Unknown table 'COLUMN_STATISTICS' in information_schema (1109)
+
+해결:
+
+adding --column-statistics=0 to clid
+ex) mysqldump --column-statistics=0 --host=<server> --user=<user> --password=<password> 
+
+or
+
+my.cnf
+[mysqldump]
+column-statistics=0
