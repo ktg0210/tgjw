@@ -1,0 +1,6 @@
+문제 :
+java.io.IOException: Cannot run program "/var/lib/jenkins/workspace/gradle/gradlew" 
+(in directory "/var/lib/jenkins/workspace/gradle"): error=13, Permission denied
+
+해결 :
+Build -> Invoke Gradle script -> Use Gradle Wrapper -> Make gradlew executable 
