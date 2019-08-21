@@ -1,0 +1,15 @@
+## 문제
+
+다른 repository에서 사용중인 deploy key를 또 다른 repository에 deploy key로 등록할 경우
+중복키 오류  error : Key already in use 가 발생한다.
+
+## 해결 :
+
+같은 Deploy key로 여러 repository에서 사용하고 싶을 경우 Github 오른쪽 상단에 profile setting에서 추가하면 된다.
+ 
+##참고 :
+  
+Github에 특정 repository에서 사용할 경우
+ Repository > Settings > Deploy Keys
+Github에서 key 사용할 경우
+ User > Settings > SSH and GPG keys
