@@ -1,1 +1,19 @@
-SELECT table_schema "Database Name", SUM(data_length + index_length) / (1024 * 1024) "Database Size in MB" FROM information_schema.TABLES GROUP BY table_schema;
+SELECT table_schema "Database Name", 
+SUM(data_length + index_length) / (1024 * 1024) "Database Size in MB" 
+FROM information_schema.TABLES GROUP BY table_schema;
+
+SELECT 
+CONCAT(table_schema,'.',table_name),   
+CONCAT(ROUND(table_rows/1000000,2),'Mb') 'rows',   
+CONCAT(ROUND(data_length/(1024*1024),2),'Mb') 'data',   
+CONCAT(ROUND(index_length/(1024*1024),2),'Mb') 'index',   
+CONCAT(ROUND((data_length+index_length)/(1024*1024),2),'Mb') 'total',   
+ROUND(index_length/data_length,2) idxfrac    
+FROM information_schema.TABLES  
+WHERE table_name = 'table';
+
+SELECT TABLE_NAME AS "Tables",
+                     round(((data_length + index_length) / 1024 / 1024), 2) "Size in MB"
+FROM information_schema.TABLES
+WHERE table_schema = "table"
+ORDER BY (data_length + index_length) DESC;
