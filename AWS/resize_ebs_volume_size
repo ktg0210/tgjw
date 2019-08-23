@@ -30,3 +30,8 @@ data blocks changed from 2096635 to 5242363
 
 # df -h | grep xvda1
 /dev/xvda1       20G  5.8G   15G  29% /
+
+
+####
+https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/requesting-ebs-volume-modifications.html#modify-ebs-volume
+https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
