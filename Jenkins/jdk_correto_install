@@ -19,3 +19,7 @@ Manage Jenkins -> Global Tool configuration -> JDK -> Add JDK -> uncheck Install
 -> Name : JAVA_HOME , JAVA_HOME : /usr/lib/jvm/java-1.8.0-amazon-corretto
 
 Apply -> Save
+
+######
+https://docs.aws.amazon.com/ko_kr/corretto/latest/corretto-8-ug/amazon-linux-install.html
+https://docs.aws.amazon.com/ko_kr/corretto/latest/corretto-8-ug/downloads-list.html
