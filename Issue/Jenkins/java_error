@@ -1,0 +1,9 @@
+## slack 연동 시 fail
+
+# cat /var/log/jenkins/jenkins.log | grep error
+publish: Error posting to Slack
+java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+
+# yum install java
+
+java-devel 만 설치할 경우 문제
