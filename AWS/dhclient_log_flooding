@@ -1,0 +1,1 @@
+''echo -e ':programname,isequal,"dhclient"	stop\n:programname,isequal,"ec2net"	stop' > /etc/rsyslog.d/ignore-dhclient-log.conf''
