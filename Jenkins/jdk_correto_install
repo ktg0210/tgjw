@@ -1,0 +1,21 @@
+# wget https://d3pxv6yz143wms.cloudfront.net/8.212.04.2/java-1.8.0-amazon-corretto-devel-1.8.0_212.b04-2.x86_64.rpm
+
+# yum -y remove jdk && yum install -y java-1.8.0-amazon-corretto-devel-1.8.0_212.b04-2.x86_64.rpm
+
+# java -version
+openjdk version "1.8.0_212"
+OpenJDK Runtime Environment Corretto-8.212.04.2 (build 1.8.0_212-b04)
+OpenJDK 64-Bit Server VM Corretto-8.212.04.2 (build 25.212-b04, mixed mode)
+
+# /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_src/bin/mvn -v
+Apache Maven 3.6.1 (d66c9c0b3152b2e69ee9bac180bb8fcc8e6af555; 2019-04-05T04:00:29+09:00)
+Maven home: /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_src
+Java version: 1.8.0_212, vendor: Amazon.com Inc., runtime: /usr/lib/jvm/java-1.8.0-amazon-corretto/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.14.133-113.105.amzn2.x86_64", arch: "amd64", family: "unix"
+
+###
+Manage Jenkins -> Global Tool configuration -> JDK -> Add JDK -> uncheck Install automatically
+-> Name : JAVA_HOME , JAVA_HOME : /usr/lib/jvm/java-1.8.0-amazon-corretto
+
+Apply -> Save
