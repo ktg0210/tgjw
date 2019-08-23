@@ -1,0 +1,25 @@
+# docker system df
+TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE
+Images              4                   0                   420.2MB             420.2MB (100%)
+Containers          0                   0                   0B                  0B
+Local Volumes       6                   0                   0B                  0B
+Build Cache         0                   0                   0B                  0B
+
+# du -hcs /var/lib/docker
+407M    /var/lib/docker
+407M    total
+
+# docker ps -s
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES               SIZE
+
+# docker system prune -a
+WARNING! This will remove:
+        - all stopped containers
+        - all networks not used by at least one container
+        - all images without at least one container associated to them
+        - all build cache
+Are you sure you want to continue? [y/N] y
+
+# du -hcs /var/lib/docker
+428K    /var/lib/docker
+428K    total
