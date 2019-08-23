@@ -84,6 +84,9 @@ export HISTFILE=/root/.bash_history-$SUDO_USER
 HISTTIMEFORMAT="%F %T "
 EOF
 
+## disable session log message flooding
+''echo 'if $programname == "systemd" and ($msg contains "Starting Session" or $msg contains "Started Session" or $msg contains "Created slice" or $msg contains "Starting user-") then stop'>/etc/rsyslog.d/ignore-systemd-session-slice.conf''
+
 ## disable selinux
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/sysconfig/selinux
 
