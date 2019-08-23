@@ -1,6 +1,4 @@
-# wget https://d3pxv6yz143wms.cloudfront.net/8.212.04.2/java-1.8.0-amazon-corretto-devel-1.8.0_212.b04-2.x86_64.rpm
-
-# yum -y remove jdk && yum install -y java-1.8.0-amazon-corretto-devel-1.8.0_212.b04-2.x86_64.rpm
+# yum -y remove jdk && yum install -y java-1.8.0-amazon-corretto-devel java-1.8.0-amazon-corretto
 
 # java -version
 openjdk version "1.8.0_212"
