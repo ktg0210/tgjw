@@ -2,4 +2,4 @@
 
 ''echo 'if $programname == "systemd" and ($msg contains "Starting Session" or $msg contains "Started Session" or $msg contains "Created slice" or $msg contains "Starting user-") then stop'>/etc/rsyslog.d/ignore-systemd-session-slice.conf''
  
- systemctl restart rsyslog
+systemctl restart rsyslog
