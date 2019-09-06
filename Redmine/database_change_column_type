@@ -1,0 +1,22 @@
+bitnami database on docker
+
+#### bitnami redmine login ####
+docker exec -ti sadfasdfxxxx /bin/bash
+
+#### mysql process check ####
+ps -ef
+
+#### mysql login ####
+mysql -uroot -p
+
+#### DDL history check ####
+show create table `bitnami_redmine`.`issues`;
+
+#### table column data type chek ####
+SHOW COLUMNS FROM issues  where Field like 'description';
+
+#### table column data type change ####
+ALTER TABLE `bitnami_redmine`.`issues` CHANGE COLUMN `description` `description` mediumtext NULL;
+
+#### table column data type modify ####
+ALTER TABLE `bitnami_redmine`.`issues` modify COLUMN `description` mediumtext NULL;
