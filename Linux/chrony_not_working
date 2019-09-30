@@ -1,0 +1,15 @@
+## issue
+AWS에서 ec2로 centos를 사용하는 경우 chrony_not_working가 발생한다.
+
+## resolution
+/etc/chrony.conf
+server 169.254.169.123 prefer iburst minpoll 4 maxpoll 4
+ ->위와 같이 설정을 추가한다.
+
+
+systemctl restart chronyd
+ -> chronyd restart
+ 
+chronyc sources -v
+chronyc tracking
+ -> 위 명령어를 통해 정상 동기화 확인
