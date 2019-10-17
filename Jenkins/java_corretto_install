@@ -18,6 +18,18 @@ Manage Jenkins -> Global Tool configuration -> JDK -> Add JDK -> uncheck Install
 
 Apply -> Save
 
+
+# alternatives --config java
+
+There are 2 programs which provide 'java'.
+
+  Selection    Command
+-----------------------------------------------
+*  1           /usr/lib/jvm/java-1.8.0-amazon-corretto/jre/bin/java
+ + 2           /usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64/jre/bin/java
+
+Enter to keep the current selection[+], or type selection number:
+
 ######
 https://docs.aws.amazon.com/ko_kr/corretto/latest/corretto-8-ug/amazon-linux-install.html
 https://docs.aws.amazon.com/ko_kr/corretto/latest/corretto-8-ug/downloads-list.html
