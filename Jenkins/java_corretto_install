@@ -14,7 +14,7 @@ OS name: "linux", version: "4.14.133-113.105.amzn2.x86_64", arch: "amd64", famil
 
 ###
 Manage Jenkins -> Global Tool configuration -> JDK -> Add JDK -> uncheck Install automatically
--> Name : JAVA_HOME , JAVA_HOME : /usr/lib/jvm/java-1.8.0-amazon-corretto
+-> Name : JAVA_HOME , JAVA_HOME : /usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64
 
 Apply -> Save
 
